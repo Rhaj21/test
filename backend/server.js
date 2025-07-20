@@ -18,7 +18,9 @@ mongoose.connect('mongodb+srv://rhexminecraft:U7uOE1Siwcp2SgJQ@cluster0.if5ioik.
 app.use('/api/tasks', taskRoutes);
 
 // Start server
-const PORT = 5000;
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
+const PORT = process.env.PORT || 10000;
+const HOST = '0.0.0.0'; // bind to all interfaces
+
+app.listen(PORT, HOST, () => {
+  console.log(Server is running at http://${HOST}:${PORT});
 });
