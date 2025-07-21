@@ -88,10 +88,3 @@ taskInputValue('Do 10 push-ups');
 taskInputValue('Water the plants');
 taskInputValue('Wash the dishes');
 taskInputValue('Meditate for 5 minutes');
-
-tasks
-fetch('http://localhost:5000/api/tasks')
-  .then(res => res.json())
-  .then(data => {
-    console.log(data); // tasks from database
-  });
